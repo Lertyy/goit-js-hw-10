@@ -16,3 +16,80 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 40px 60px;
+  color: #2e2f42;
+}
+
+/* Верхняя панель */
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+}
+
+#datetime-picker:disabled {
+  background-color: #fafafa;
+  color: #808080;
+}
+
+/* Кнопка */
+button[data-start] {
+  margin-left: 8px;
+  width: 75px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #989898;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button[data-start]:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+/* Таймер */
+.timer {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.label {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #2e2f42;
+}
